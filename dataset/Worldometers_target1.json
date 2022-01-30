@@ -19,45 +19,63 @@
 		},
 		"schema": [
 			{
+				"name": "#",
 				"type": "String"
 			},
 			{
+				"name": "Country, Other",
 				"type": "String"
 			},
 			{
+				"name": "Total Cases",
 				"type": "String"
 			},
 			{
+				"name": "New Cases",
 				"type": "String"
 			},
 			{
+				"name": "Total Deaths",
 				"type": "String"
 			},
 			{
+				"name": "New Deaths",
 				"type": "String"
 			},
 			{
+				"name": "Total Recovered",
 				"type": "String"
 			},
 			{
+				"name": "New Recovered",
 				"type": "String"
 			},
 			{
+				"name": "Active Cases",
 				"type": "String"
 			},
 			{
+				"name": "Serious, Critical",
 				"type": "String"
 			},
 			{
+				"name": "Tot Cases/ 1M pop",
 				"type": "String"
 			},
 			{
+				"name": "Deaths/ 1M pop",
 				"type": "String"
 			},
 			{
+				"name": "Total Tests",
 				"type": "String"
 			},
 			{
+				"name": "Tests/ 1M pop",
+				"type": "String"
+			},
+			{
+				"name": "Population ",
 				"type": "String"
 			}
 		]
