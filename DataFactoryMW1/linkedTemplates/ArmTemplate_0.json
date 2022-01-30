@@ -63,9 +63,10 @@
 						"type": "AzureBlobStorageLocation",
 						"container": "data1"
 					},
-					"columnDelimiter": ",",
+					"columnDelimiter": ";",
+					"rowDelimiter": "\n",
 					"escapeChar": "\\",
-					"firstRowAsHeader": true,
+					"firstRowAsHeader": false,
 					"quoteChar": "\""
 				},
 				"schema": []
@@ -164,7 +165,7 @@
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
 									"quoteAllText": true,
-									"fileExtension": ".csv"
+									"fileExtension": ".txt"
 								}
 							},
 							"enableStaging": false,
@@ -177,9 +178,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "#",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 1
 										}
 									},
 									{
@@ -188,9 +189,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Country, Other",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 2
 										}
 									},
 									{
@@ -199,9 +200,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Cases",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 3
 										}
 									},
 									{
@@ -210,9 +211,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Cases",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 4
 										}
 									},
 									{
@@ -221,9 +222,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Deaths",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 5
 										}
 									},
 									{
@@ -232,9 +233,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Deaths",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 6
 										}
 									},
 									{
@@ -243,9 +244,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Recovered",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 7
 										}
 									},
 									{
@@ -254,9 +255,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Recovered",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 8
 										}
 									},
 									{
@@ -265,9 +266,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Active Cases",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 9
 										}
 									},
 									{
@@ -276,9 +277,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Serious, Critical",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 10
 										}
 									},
 									{
@@ -287,9 +288,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Tot Cases/ 1M pop",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 11
 										}
 									},
 									{
@@ -298,9 +299,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Deaths/ 1M pop",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 12
 										}
 									},
 									{
@@ -309,9 +310,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Tests",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 13
 										}
 									},
 									{
@@ -320,9 +321,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Tests/ \n1M pop",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 14
 										}
 									},
 									{
@@ -331,9 +332,9 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Population",
 											"type": "String",
-											"physicalType": "String"
+											"physicalType": "String",
+											"ordinal": 15
 										}
 									}
 								],
