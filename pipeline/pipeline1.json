@@ -50,8 +50,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Country, Other",
-									"type": "String",
+									"name": "Country_Other",
 									"physicalType": "String"
 								}
 							},
@@ -61,8 +60,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Total Cases",
-									"type": "String",
+									"name": "Total_Cases",
 									"physicalType": "String"
 								}
 							},
@@ -72,8 +70,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "New Cases",
-									"type": "String",
+									"name": "New_Cases",
 									"physicalType": "String"
 								}
 							},
@@ -83,8 +80,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Total Deaths",
-									"type": "String",
+									"name": "Total_Deaths",
 									"physicalType": "String"
 								}
 							},
@@ -94,8 +90,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "New Deaths",
-									"type": "String",
+									"name": "New_Deaths",
 									"physicalType": "String"
 								}
 							},
@@ -105,8 +100,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Total Recovered",
-									"type": "String",
+									"name": "Total_Recovered",
 									"physicalType": "String"
 								}
 							},
@@ -116,8 +110,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "New Recovered",
-									"type": "String",
+									"name": "New_Recovered",
 									"physicalType": "String"
 								}
 							},
@@ -127,8 +120,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Active Cases",
-									"type": "String",
+									"name": "Active_Cases",
 									"physicalType": "String"
 								}
 							},
@@ -138,8 +130,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Serious, Critical",
-									"type": "String",
+									"name": "Serious_Critical",
 									"physicalType": "String"
 								}
 							},
@@ -149,8 +140,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Tot Cases/ 1M pop",
-									"type": "String",
+									"name": "Tot Cases_1M pop",
 									"physicalType": "String"
 								}
 							},
@@ -160,8 +150,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Deaths/ 1M pop",
-									"type": "String",
+									"name": "Deaths_1M pop",
 									"physicalType": "String"
 								}
 							},
@@ -171,8 +160,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Total Tests",
-									"type": "String",
+									"name": "Total_Tests",
 									"physicalType": "String"
 								}
 							},
@@ -182,8 +170,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Tests/ \n1M pop",
-									"type": "String",
+									"name": "Tests_1M pop",
 									"physicalType": "String"
 								}
 							},
