@@ -1,0 +1,16 @@
+{
+	"name": "OurWorldInData_Corona",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Web",
+		"typeProperties": {
+			"url": "https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv?raw=true",
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
