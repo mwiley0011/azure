@@ -1,0 +1,20 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Worldometers_target1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1"
+		}
+	}
+}
