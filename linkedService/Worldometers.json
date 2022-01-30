@@ -1,6 +1,5 @@
 {
 	"name": "Worldometers",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "Web",
@@ -12,5 +11,6 @@
 			"referenceName": "integrationRuntime1",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
