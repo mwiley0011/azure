@@ -23,59 +23,59 @@
 				"type": "String"
 			},
 			{
-				"name": "Country, Other",
+				"name": "Country_Other",
 				"type": "String"
 			},
 			{
-				"name": "Total Cases",
+				"name": "Total_Cases",
 				"type": "String"
 			},
 			{
-				"name": "New Cases",
+				"name": "New_Cases",
 				"type": "String"
 			},
 			{
-				"name": "Total Deaths",
+				"name": "Total_Deaths",
 				"type": "String"
 			},
 			{
-				"name": "New Deaths",
+				"name": "New_Deaths",
 				"type": "String"
 			},
 			{
-				"name": "Total Recovered",
+				"name": "Total_Recovered",
 				"type": "String"
 			},
 			{
-				"name": "New Recovered",
+				"name": "New_Recovered",
 				"type": "String"
 			},
 			{
-				"name": "Active Cases",
+				"name": "Active_Cases",
 				"type": "String"
 			},
 			{
-				"name": "Serious, Critical",
+				"name": "Serious_Critical",
 				"type": "String"
 			},
 			{
-				"name": "Tot Cases/ 1M pop",
+				"name": "Tot Cases_1M pop",
 				"type": "String"
 			},
 			{
-				"name": "Deaths/ 1M pop",
+				"name": "Deaths_1M pop",
 				"type": "String"
 			},
 			{
-				"name": "Total Tests",
+				"name": "Total_Tests",
 				"type": "String"
 			},
 			{
-				"name": "Tests/ 1M pop",
+				"name": "Tests_1M pop",
 				"type": "String"
 			},
 			{
-				"name": "Population ",
+				"name": "Population",
 				"type": "String"
 			}
 		]
