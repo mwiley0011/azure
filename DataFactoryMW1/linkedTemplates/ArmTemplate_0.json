@@ -154,16 +154,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"source": {
-								"type": "WebSource",
-								"additionalColumns": [
-									{
-										"name": "Trigger_Time",
-										"value": {
-											"value": "@pipeline().TriggerTime",
-											"type": "Expression"
-										}
-									}
-								]
+								"type": "WebSource"
 							},
 							"sink": {
 								"type": "DelimitedTextSink",
@@ -179,6 +170,173 @@
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "#",
+											"type": "String"
+										},
+										"sink": {
+											"name": "#",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Country, Other",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Country, Other",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Total Cases",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Total Cases",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "New Cases",
+											"type": "String"
+										},
+										"sink": {
+											"name": "New Cases",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Total Deaths",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Total Deaths",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "New Deaths",
+											"type": "String"
+										},
+										"sink": {
+											"name": "New Deaths",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Total Recovered",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Total Recovered",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "New Recovered",
+											"type": "String"
+										},
+										"sink": {
+											"name": "New Recovered",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Active Cases",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Active Cases",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Serious, Critical",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Serious, Critical",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Tot Cases/ 1M pop",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Tot Cases/ 1M pop",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Deaths/ 1M pop",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Deaths/ 1M pop",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Total Tests",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Total Tests",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Tests/ \n1M pop",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Tests/ \n1M pop",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Population",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Population",
+											"type": "String",
+											"physicalType": "String"
+										}
+									}
+								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
