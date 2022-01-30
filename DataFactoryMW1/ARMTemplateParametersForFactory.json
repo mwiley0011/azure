@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DataFactoryMW1"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"OurWorldInData_Corona_properties_typeProperties_url": {
+			"value": "https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv?raw=true"
+		},
+		"Worldometers_properties_typeProperties_url": {
+			"value": "https://www.worldometers.info/coronavirus/"
+		}
+	}
+}
