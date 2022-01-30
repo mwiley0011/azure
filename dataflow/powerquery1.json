@@ -3,7 +3,18 @@
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
-			"sources": []
+			"sources": [
+				{
+					"name": "Worldometers_target1",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  Worldometers_target1",
+					"dataset": {
+						"referenceName": "Worldometers_target1",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared Worldometers_target1 = let\r\n  AdfDoc = AzureStorage.BlobContents(\"https://storage1mw.blob.core.windows.net/data1/0.csv\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \";\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv])\r\nin\r\n  Csv;\r\nshared UserQuery = let\r\n  Source = Worldometers_target1\r\nin\r\n  Source;\r\n",
+			"documentLocale": "en-us"
 		}
 	}
 }
