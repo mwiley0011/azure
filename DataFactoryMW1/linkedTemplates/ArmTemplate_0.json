@@ -74,59 +74,59 @@
 						"type": "String"
 					},
 					{
-						"name": "Country, Other",
+						"name": "Country_Other",
 						"type": "String"
 					},
 					{
-						"name": "Total Cases",
+						"name": "Total_Cases",
 						"type": "String"
 					},
 					{
-						"name": "New Cases",
+						"name": "New_Cases",
 						"type": "String"
 					},
 					{
-						"name": "Total Deaths",
+						"name": "Total_Deaths",
 						"type": "String"
 					},
 					{
-						"name": "New Deaths",
+						"name": "New_Deaths",
 						"type": "String"
 					},
 					{
-						"name": "Total Recovered",
+						"name": "Total_Recovered",
 						"type": "String"
 					},
 					{
-						"name": "New Recovered",
+						"name": "New_Recovered",
 						"type": "String"
 					},
 					{
-						"name": "Active Cases",
+						"name": "Active_Cases",
 						"type": "String"
 					},
 					{
-						"name": "Serious, Critical",
+						"name": "Serious_Critical",
 						"type": "String"
 					},
 					{
-						"name": "Tot Cases/ 1M pop",
+						"name": "Tot Cases_1M pop",
 						"type": "String"
 					},
 					{
-						"name": "Deaths/ 1M pop",
+						"name": "Deaths_1M pop",
 						"type": "String"
 					},
 					{
-						"name": "Total Tests",
+						"name": "Total_Tests",
 						"type": "String"
 					},
 					{
-						"name": "Tests/ 1M pop",
+						"name": "Tests_1M pop",
 						"type": "String"
 					},
 					{
-						"name": "Population ",
+						"name": "Population",
 						"type": "String"
 					}
 				]
@@ -220,8 +220,12 @@
 							"name": "sink1"
 						}
 					],
-					"transformations": [],
-					"script": "source(output(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tmultiLineRow: true) ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+					"transformations": [
+						{
+							"name": "Filter1"
+						}
+					],
+					"script": "source(output(\n\t\t{#} as integer,\n\t\tCountry_Other as string,\n\t\tTotal_Cases as string,\n\t\tNew_Cases as string,\n\t\tTotal_Deaths as string,\n\t\tNew_Deaths as string,\n\t\tTotal_Recovered as string,\n\t\tNew_Recovered as string,\n\t\tActive_Cases as string,\n\t\tSerious_Critical as string,\n\t\t{Tot Cases_1M pop} as string,\n\t\t{Deaths_1M pop} as string,\n\t\tTotal_Tests as string,\n\t\t{Tests_1M pop} as string,\n\t\tPopulation as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 filter({#} >= 1) ~> Filter1\nFilter1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\t{#} as string,\n\t\tCountry_Other as string,\n\t\tTotal_Cases as string,\n\t\tNew_Cases as string,\n\t\tTotal_Deaths as string,\n\t\tNew_Deaths as string,\n\t\tTotal_Recovered as string,\n\t\tNew_Recovered as string,\n\t\tActive_Cases as string,\n\t\tSerious_Critical as string,\n\t\t{Tot Cases_1M pop} as string,\n\t\t{Deaths_1M pop} as string,\n\t\tTotal_Tests as string,\n\t\t{Tests_1M pop} as string,\n\t\tPopulation as string\n\t),\n\tfilePattern:(toString(currentTimestamp()) ),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 				}
 			},
 			"dependsOn": [
