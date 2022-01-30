@@ -58,13 +58,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Worldometers",
+						"referenceName": "Worldometers_target1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Worldometers",
+						"referenceName": "Worldometers_target1",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,5 +1,5 @@
 {
-	"name": "Worldometers",
+	"name": "Worldometers_target1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
