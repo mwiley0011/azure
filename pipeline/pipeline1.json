@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "WebSource",
 						"additionalColumns": [
 							{
 								"name": "Trigger_Time",
@@ -25,15 +25,7 @@
 									"type": "Expression"
 								}
 							}
-						],
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
+						]
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
@@ -58,7 +50,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Worldometers_target1",
+						"referenceName": "WebTable1",
 						"type": "DatasetReference"
 					}
 				],
