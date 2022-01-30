@@ -78,8 +78,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Country, Other",
-											"type": "String",
+											"name": "Country_Other",
 											"physicalType": "String"
 										}
 									},
@@ -89,8 +88,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Cases",
-											"type": "String",
+											"name": "Total_Cases",
 											"physicalType": "String"
 										}
 									},
@@ -100,8 +98,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Cases",
-											"type": "String",
+											"name": "New_Cases",
 											"physicalType": "String"
 										}
 									},
@@ -111,8 +108,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Deaths",
-											"type": "String",
+											"name": "Total_Deaths",
 											"physicalType": "String"
 										}
 									},
@@ -122,8 +118,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Deaths",
-											"type": "String",
+											"name": "New_Deaths",
 											"physicalType": "String"
 										}
 									},
@@ -133,8 +128,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Recovered",
-											"type": "String",
+											"name": "Total_Recovered",
 											"physicalType": "String"
 										}
 									},
@@ -144,8 +138,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "New Recovered",
-											"type": "String",
+											"name": "New_Recovered",
 											"physicalType": "String"
 										}
 									},
@@ -155,8 +148,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Active Cases",
-											"type": "String",
+											"name": "Active_Cases",
 											"physicalType": "String"
 										}
 									},
@@ -166,8 +158,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Serious, Critical",
-											"type": "String",
+											"name": "Serious_Critical",
 											"physicalType": "String"
 										}
 									},
@@ -177,8 +168,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Tot Cases/ 1M pop",
-											"type": "String",
+											"name": "Tot Cases_1M pop",
 											"physicalType": "String"
 										}
 									},
@@ -188,8 +178,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Deaths/ 1M pop",
-											"type": "String",
+											"name": "Deaths_1M pop",
 											"physicalType": "String"
 										}
 									},
@@ -199,8 +188,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Total Tests",
-											"type": "String",
+											"name": "Total_Tests",
 											"physicalType": "String"
 										}
 									},
@@ -210,8 +198,7 @@
 											"type": "String"
 										},
 										"sink": {
-											"name": "Tests/ \n1M pop",
-											"type": "String",
+											"name": "Tests_1M pop",
 											"physicalType": "String"
 										}
 									},
@@ -458,7 +445,7 @@
 						}
 					],
 					"transformations": [],
-					"script": "source(output(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+					"script": "source(output(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tmultiLineRow: true) ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\t{#} as string,\n\t\t{Country, Other} as string,\n\t\t{Total Cases} as string,\n\t\t{New Cases} as string,\n\t\t{Total Deaths} as string,\n\t\t{New Deaths} as string,\n\t\t{Total Recovered} as string,\n\t\t{New Recovered} as string,\n\t\t{Active Cases} as string,\n\t\t{Serious, Critical} as string,\n\t\t{Tot Cases/ 1M pop} as string,\n\t\t{Deaths/ 1M pop} as string,\n\t\t{Total Tests} as string,\n\t\t{Tests/ 1M pop} as string,\n\t\t{Population } as string\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 				}
 			},
 			"dependsOn": [
